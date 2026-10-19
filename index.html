@@ -130,40 +130,40 @@
     </div>
 
     <!-- SCREEN 1: MAIN MENU -->
-    <div id="mainMenuScreen" class="absolute inset-0 z-30 flex flex-col items-center justify-between p-6">
+    <div id="mainMenuScreen" class="absolute inset-0 z-30 flex flex-col items-center justify-between p-3 sm:p-6">
         <canvas id="menuHallCanvas" class="absolute inset-0 w-full h-full object-cover pointer-events-none"></canvas>
 
         <div class="relative z-10 flex flex-wrap items-center justify-between gap-2 w-full">
           <div class="flex items-center gap-2">
-            <button id="menuTopAccountBtn" class="btn-lux glass-dark hover:bg-slate-800 border border-amber-400/50 px-4 py-1.5 rounded-full font-extrabold text-xs text-amber-200 shadow flex items-center gap-2">
+            <button id="menuTopAccountBtn" class="btn-lux glass-dark hover:bg-slate-800 border border-amber-400/50 px-3 sm:px-4 py-1.5 rounded-full font-extrabold text-xs text-amber-200 shadow flex items-center gap-1.5 sm:gap-2">
               <span id="menuTopAccountAvatar" class="text-base">🧐</span>
               <span id="menuTopRankIcon">🥉</span>
-              <span>Account: <strong id="menuTopAccountName" class="text-white">Collector</strong></span>
-              <span id="menuTopRankPill" class="bg-amber-500/25 border border-amber-400/40 px-2 py-0.5 rounded-full text-[11px] text-amber-300">BRONZE (100 RP)</span>
+              <span><span class="hidden sm:inline">Account: </span><strong id="menuTopAccountName" class="text-white">Collector</strong></span>
+              <span id="menuTopRankPill" class="bg-amber-500/25 border border-amber-400/40 px-2 py-0.5 rounded-full text-[10px] sm:text-[11px] text-amber-300">BRONZE (100 RP)</span>
             </button>
-            <button id="menuTopCustomizeBtn" class="btn-lux glass-dark hover:bg-slate-800 border border-purple-400/50 px-3.5 py-1.5 rounded-full font-extrabold text-xs text-purple-200 shadow flex items-center gap-1.5">
+            <button id="menuTopCustomizeBtn" class="hidden sm:flex btn-lux glass-dark hover:bg-slate-800 border border-purple-400/50 px-3.5 py-1.5 rounded-full font-extrabold text-xs text-purple-200 shadow items-center gap-1.5">
               <span>👔</span>
               <span>Customize Character</span>
             </button>
           </div>
-          <div class="flex items-center gap-2">
-            <button id="menuFullscreenToggleBtn" class="btn-lux glass-dark hover:bg-slate-800 border border-amber-500/30 px-3.5 py-1.5 rounded-full font-bold text-xs text-amber-200 shadow flex items-center gap-1">
+          <div class="flex items-center gap-1.5 sm:gap-2">
+            <button id="menuFullscreenToggleBtn" class="hidden sm:flex btn-lux glass-dark hover:bg-slate-800 border border-amber-500/30 px-3.5 py-1.5 rounded-full font-bold text-xs text-amber-200 shadow items-center gap-1">
               🖥️ Fullscreen
             </button>
-            <button id="openShareMenuBtn" class="btn-lux glass-dark hover:bg-slate-800 border border-emerald-400/40 px-3.5 py-1.5 rounded-full font-extrabold text-xs text-emerald-300 shadow">
-              🔗 Share Link
+            <button id="openShareMenuBtn" class="btn-lux glass-dark hover:bg-slate-800 border border-emerald-400/40 px-2.5 sm:px-3.5 py-1.5 rounded-full font-extrabold text-xs text-emerald-300 shadow">
+              🔗 <span class="hidden sm:inline">Share Link</span>
             </button>
-            <button id="openSettingsMenuBtn" class="btn-lux glass-dark hover:bg-slate-800 border border-amber-500/30 px-3.5 py-1.5 rounded-full font-bold text-xs text-amber-200 shadow">
+            <button id="openSettingsMenuBtn" class="hidden sm:inline-block btn-lux glass-dark hover:bg-slate-800 border border-amber-500/30 px-3.5 py-1.5 rounded-full font-bold text-xs text-amber-200 shadow">
               ⚙️ Settings
             </button>
-            <button id="musicToggleBtn" class="btn-lux glass-dark hover:bg-slate-800 border border-amber-500/30 px-3.5 py-1.5 rounded-full font-bold text-xs text-amber-200 shadow">
+            <button id="musicToggleBtn" class="btn-lux glass-dark hover:bg-slate-800 border border-amber-500/30 px-2.5 sm:px-3.5 py-1.5 rounded-full font-bold text-xs text-amber-200 shadow">
               🎵 Audio: ON
             </button>
           </div>
         </div>
 
         <!-- UNIFIED SINGLE MAIN MENU CARD -->
-        <div class="relative z-10 glass-dark border border-amber-500/40 rounded-3xl p-6 text-center max-w-md w-full shadow-2xl my-auto backdrop-blur-xl bg-slate-950/85">
+        <div class="relative z-10 glass-dark border border-amber-500/40 rounded-3xl p-4 sm:p-6 text-center max-w-md w-full shadow-2xl my-auto backdrop-blur-xl bg-slate-950/85 max-h-[85vh] overflow-y-auto">
           <div class="inline-flex items-center gap-1.5 bg-gradient-to-r from-amber-500/25 via-rose-500/25 to-amber-500/25 border border-amber-400/60 text-amber-200 font-black text-[10px] px-3 py-0.5 rounded-full tracking-widest uppercase mb-2 shadow">
             <span>🏆</span> <span>AUCTION GAME JAM • CHAMPIONSHIP EDITION</span> <span>🏆</span>
           </div>
@@ -178,12 +178,12 @@
               </h1>
             </div>
           </div>
-          <p class="text-xs text-slate-300 font-medium mb-3.5 leading-relaxed">
+          <p class="hidden sm:block text-xs text-slate-300 font-medium mb-3.5 leading-relaxed">
             Outsmart rival collectors across <strong>10 high-stakes lots</strong> with <strong>Mind-Game Power-Ups</strong>, <strong>Mystery Vault Twists</strong>, and <strong>Live Bounties</strong>!
           </p>
 
           <!-- Starting Limited Cash Selector (Single Menu, Always Accessible) -->
-          <div class="w-full bg-slate-900/95 border border-amber-500/30 rounded-2xl p-2.5 mb-3.5 shadow-inner">
+          <div class="w-full bg-slate-900/95 border border-amber-500/30 rounded-2xl p-2 sm:p-2.5 mb-2.5 sm:mb-3.5 shadow-inner mt-2 sm:mt-0">
             <div class="text-[11px] font-black text-amber-300 mb-1.5 uppercase tracking-wider flex items-center justify-center gap-1.5">
               <span>💰</span> <span>Starting Limited Cash:</span>
             </div>
@@ -198,9 +198,9 @@
           <!-- PRIMARY PLAY BUTTONS (NO SUB-STEPS - ONE DIRECT MENU) -->
           <div class="flex flex-col items-center gap-2 w-full">
             <!-- Ranked Championship + Casual Singleplayer Row -->
-            <button id="rankedPlayBtn" class="btn-lux w-full py-3 bg-gradient-to-r from-rose-600 via-amber-500 to-yellow-400 hover:from-rose-500 hover:to-yellow-300 text-slate-950 font-black text-sm rounded-2xl shadow-xl shadow-rose-500/30 border-2 border-white/80 flex items-center justify-center gap-2 transform hover:scale-[1.02]">
+            <button id="rankedPlayBtn" class="btn-lux w-full py-3 bg-gradient-to-r from-rose-600 via-amber-500 to-yellow-400 hover:from-rose-500 hover:to-yellow-300 text-slate-950 font-black text-xs sm:text-sm rounded-2xl shadow-xl shadow-rose-500/30 border-2 border-white/80 flex items-center justify-center gap-2 transform hover:scale-[1.02]">
               <span>🏆 PLAY RANKED MODE</span>
-              <span id="menuRankedBtnPill" class="bg-slate-950/90 text-amber-300 border border-amber-400/60 px-2.5 py-0.5 rounded-full text-[11px] font-extrabold shadow">🥉 BRONZE II • 100 RP</span>
+              <span id="menuRankedBtnPill" class="bg-slate-950/90 text-amber-300 border border-amber-400/60 px-2 sm:px-2.5 py-0.5 rounded-full text-[10px] sm:text-[11px] font-extrabold shadow">🥉 BRONZE II • 100 RP</span>
             </button>
 
             <div class="grid grid-cols-2 gap-2 w-full">
@@ -217,7 +217,7 @@
             <div class="grid grid-cols-2 gap-2 w-full mt-0.5">
               <button id="openCustomizerMainBtn" class="btn-lux py-2.5 bg-gradient-to-r from-purple-600 via-fuchsia-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-extrabold text-xs rounded-xl shadow-lg border border-purple-400/50 flex items-center justify-center gap-1.5">
                 <span>👔</span>
-                <span>Customize Character</span>
+                <span>Customize</span>
               </button>
               <button id="openAccountMainBtn" class="btn-lux py-2.5 bg-slate-800/95 hover:bg-slate-700 border border-amber-400/50 text-amber-300 font-extrabold text-xs rounded-xl shadow flex items-center justify-center gap-1.5">
                 <span id="menuAccountBtnAvatar">🧐</span>
@@ -225,14 +225,14 @@
               </button>
             </div>
 
-            <div class="grid grid-cols-5 gap-1.5 w-full">
+            <div class="grid grid-cols-3 sm:grid-cols-5 gap-1.5 w-full">
               <button id="openTutorialMainBtn" class="btn-lux py-1.5 bg-teal-600/90 hover:bg-teal-500 text-white font-bold text-xs rounded-xl border border-teal-400/40">
                 🎓 Tutorial
               </button>
-              <button id="previewWinCutsceneBtn" class="btn-lux py-1.5 bg-slate-800/90 hover:bg-slate-700 border border-emerald-400/40 text-emerald-300 font-bold text-xs rounded-xl">
+              <button id="previewWinCutsceneBtn" class="hidden sm:block btn-lux py-1.5 bg-slate-800/90 hover:bg-slate-700 border border-emerald-400/40 text-emerald-300 font-bold text-xs rounded-xl">
                 🏆 Victory
               </button>
-              <button id="replayIntroBtn" class="btn-lux py-1.5 bg-slate-800/90 hover:bg-slate-700 text-amber-300 font-bold text-xs border border-amber-500/40 rounded-xl flex items-center justify-center gap-1">
+              <button id="replayIntroBtn" class="hidden sm:flex btn-lux py-1.5 bg-slate-800/90 hover:bg-slate-700 text-amber-300 font-bold text-xs border border-amber-500/40 rounded-xl items-center justify-center gap-1">
                 <span>🎬 Intro</span>
               </button>
               <button id="openRulesBtn" class="btn-lux py-1.5 bg-slate-800/90 hover:bg-slate-700 text-slate-200 font-bold text-xs border border-slate-600 rounded-xl">
@@ -245,7 +245,7 @@
           </div>
         </div>
 
-        <div class="relative z-10 text-xs font-semibold text-amber-200/90 glass-dark px-4 py-1.5 rounded-full border border-amber-500/20">
+        <div class="hidden sm:block relative z-10 text-xs font-semibold text-amber-200/90 glass-dark px-4 py-1.5 rounded-full border border-amber-500/20">
           🎷 Velvet Overture (Menu) • Cinematic Story Score (Intro) • Monte Carlo Showroom Groove (In-Game)
         </div>
       </div>
@@ -254,24 +254,24 @@
       <div id="cutsceneScreen" class="hidden absolute inset-0 z-30 flex flex-col justify-between bg-gradient-to-b from-[#0a1224] via-[#0d1830] to-[#070c18]">
         <canvas id="cutsceneCanvas" class="w-full flex-1 object-cover"></canvas>
 
-        <div class="glass-dark border-t border-amber-500/30 px-6 py-4 flex items-center justify-between gap-4">
-          <div class="flex-1">
-            <div class="flex items-center gap-3 mb-1.5">
-              <span id="cutsceneActBadge" class="text-xs font-extrabold text-amber-400 uppercase tracking-wider">🎬 CONTINUOUS STORY INTRO</span>
+        <div class="glass-dark border-t border-amber-500/30 px-3 sm:px-6 py-3 sm:py-4 flex flex-wrap sm:flex-nowrap items-center justify-between gap-2 sm:gap-4">
+          <div class="flex-1 min-w-[200px]">
+            <div class="flex items-center gap-2 sm:gap-3 mb-1">
+              <span id="cutsceneActBadge" class="text-[11px] sm:text-xs font-extrabold text-amber-400 uppercase tracking-wider">🎬 CONTINUOUS STORY INTRO</span>
               <div class="flex-1 max-w-sm h-2 bg-slate-800 rounded-full overflow-hidden">
                 <div id="cutsceneProgressBar" class="h-full bg-gradient-to-r from-amber-400 to-emerald-400 transition-all duration-100" style="width: 0%"></div>
               </div>
             </div>
-            <p id="cutsceneSubtitle" class="text-sm font-semibold text-slate-100">
+            <p id="cutsceneSubtitle" class="text-xs sm:text-sm font-semibold text-slate-100 leading-snug">
               Walking happily toward the Boutique Shop holding your savings bag in both hands...
             </p>
           </div>
-          <div class="flex items-center gap-2.5 shrink-0">
-            <button id="replayActiveCutsceneBtn" class="btn-lux px-4 py-2.5 bg-slate-800 hover:bg-slate-700 border border-amber-400/40 text-amber-300 font-extrabold text-xs rounded-xl">
+          <div class="flex items-center gap-2 shrink-0">
+            <button id="replayActiveCutsceneBtn" class="hidden sm:inline-block btn-lux px-4 py-2.5 bg-slate-800 hover:bg-slate-700 border border-amber-400/40 text-amber-300 font-extrabold text-xs rounded-xl">
               🔄 Restart
             </button>
-            <button id="skipCutsceneBtn" class="btn-lux px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-xs rounded-xl">
-              Skip Intro ⏭
+            <button id="skipCutsceneBtn" class="btn-lux px-4 sm:px-5 py-2 sm:py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-xs rounded-xl">
+              Skip ⏭
             </button>
           </div>
         </div>
@@ -281,28 +281,28 @@
       <div id="gameScreen" class="hidden absolute inset-0 flex flex-col justify-between">
         
         <!-- TOP HUD BAR -->
-        <div class="relative z-20 flex items-center justify-between px-4 py-2.5 glass-dark border-b border-amber-500/30 text-xs">
-          <div class="flex items-center gap-2.5">
-            <button id="backToMenuFromGameBtn" class="px-3 py-1 bg-slate-800 hover:bg-slate-700 border border-slate-600 rounded-lg font-bold text-xs">⬅ Menu</button>
-            <span id="gameModeBadge" class="px-2.5 py-0.5 rounded-full text-[11px] font-black bg-slate-800 border border-slate-600 text-slate-200">🎲 CASUAL</span>
+        <div class="relative z-20 flex items-center justify-between px-2.5 sm:px-4 py-1.5 sm:py-2.5 glass-dark border-b border-amber-500/30 text-xs">
+          <div class="flex items-center gap-1.5 sm:gap-2.5">
+            <button id="backToMenuFromGameBtn" class="px-2.5 sm:px-3 py-1 bg-slate-800 hover:bg-slate-700 border border-slate-600 rounded-lg font-bold text-xs">⬅ <span class="hidden sm:inline">Menu</span></button>
+            <span id="gameModeBadge" class="hidden sm:inline-block px-2.5 py-0.5 rounded-full text-[11px] font-black bg-slate-800 border border-slate-600 text-slate-200">🎲 CASUAL</span>
             <span id="lotProgressBadge" class="font-extrabold text-xs text-amber-300">Lot 1 / 10</span>
-            <div id="lotDotsRow" class="flex items-center gap-1"></div>
+            <div id="lotDotsRow" class="hidden md:flex items-center gap-1"></div>
           </div>
 
-          <div class="flex items-center gap-2.5">
-            <span id="gameStatePill" class="px-3 py-1 bg-amber-500/20 border border-amber-400/40 rounded-full font-extrabold text-xs text-amber-300">
+          <div class="flex items-center gap-1.5 sm:gap-2.5">
+            <span id="gameStatePill" class="hidden sm:inline-block px-3 py-1 bg-amber-500/20 border border-amber-400/40 rounded-full font-extrabold text-xs text-amber-300">
               ✨ Unveiling Lot
             </span>
-            <span id="roundClockText" class="font-mono font-extrabold text-base text-white w-10 text-right">13s</span>
+            <span id="roundClockText" class="font-mono font-extrabold text-sm sm:text-base text-amber-300 sm:text-white bg-slate-900/90 sm:bg-transparent px-2 sm:px-0 py-0.5 rounded-lg border border-amber-400/40 sm:border-0 sm:w-10 text-center sm:text-right">13s</span>
           </div>
 
-          <div class="flex items-center gap-3 font-bold">
-            <span id="nowPlayingBadge" class="hidden sm:inline-block px-2.5 py-0.5 bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 rounded-full text-xs">
+          <div class="flex items-center gap-2 sm:gap-3 font-bold">
+            <span id="nowPlayingBadge" class="hidden lg:inline-block px-2.5 py-0.5 bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 rounded-full text-xs">
               🎷 Monte Carlo Groove
             </span>
-            <span>Items: <strong id="topYourItems" class="text-amber-400">0</strong></span>
-            <span class="flex items-center gap-1"><span id="topYourAvatar" class="text-base">🧐</span> Cash: <strong id="topYourCash" class="text-emerald-400">$100,000</strong></span>
-            <button id="openSettingsInGameBtn" class="px-2.5 py-1 bg-slate-800 hover:bg-slate-700 border border-slate-600 rounded-lg text-xs" title="Settings">⚙️</button>
+            <span><span class="hidden sm:inline">Items: </span><span class="sm:hidden">🎒</span><strong id="topYourItems" class="text-amber-400">0</strong></span>
+            <span class="flex items-center gap-1"><span id="topYourAvatar" class="hidden sm:inline text-base">🧐</span> <span class="hidden sm:inline">Cash:</span> <strong id="topYourCash" class="text-emerald-400">$100,000</strong></span>
+            <button id="openSettingsInGameBtn" class="px-2 sm:px-2.5 py-1 bg-slate-800 hover:bg-slate-700 border border-slate-600 rounded-lg text-xs" title="Settings">⚙️</button>
           </div>
         </div>
 
@@ -311,25 +311,25 @@
           <canvas id="tableCanvas" class="w-full h-full object-cover"></canvas>
 
           <!-- Left Rival (#03) -->
-          <div class="absolute left-4 top-3 glass-dark border border-sky-400/30 rounded-2xl px-3.5 py-2 shadow-lg pointer-events-none">
-            <div class="text-xs font-extrabold text-sky-300 flex items-center gap-1">◀ <span id="leftRivalAvatar" class="text-sm">🕶️</span> <span id="leftNameTxt">Rival #03</span> (#03) <span id="leftRivalRankBadge" class="hidden px-1.5 py-0.5 rounded bg-amber-500/20 border border-amber-400/40 text-[10px] text-amber-300">🥉 120 RP</span> • <span id="leftItemsTxt">0</span> Items • <span id="leftCashTxt" class="text-emerald-400">$100K</span> <span id="leftXrayBadge" class="hidden px-1.5 py-0.5 rounded bg-cyan-500/25 border border-cyan-400 text-[10px] text-cyan-200 font-mono">🔍 Max: $0</span></div>
-            <div id="leftBubbleTxt" class="text-xs font-medium text-slate-300 italic mt-0.5">"Ready for the opening bid."</div>
+          <div class="absolute left-1.5 sm:left-4 top-1.5 sm:top-3 max-w-[31%] sm:max-w-none glass-dark border border-sky-400/30 rounded-xl sm:rounded-2xl px-2 sm:px-3.5 py-1 sm:py-2 shadow-lg pointer-events-none">
+            <div class="text-[10px] sm:text-xs font-extrabold text-sky-300 flex flex-wrap items-center gap-1 leading-tight"><span class="hidden sm:inline">◀</span> <span id="leftRivalAvatar" class="text-xs sm:text-sm">🕶️</span> <span id="leftNameTxt" class="truncate max-w-[68px] sm:max-w-none">Rival #03</span> <span class="hidden sm:inline">(#03)</span> <span id="leftRivalRankBadge" class="hidden px-1.5 py-0.5 rounded bg-amber-500/20 border border-amber-400/40 text-[10px] text-amber-300">🥉 120 RP</span> <span class="hidden sm:inline">•</span> <span class="text-amber-300 sm:text-sky-300"><span id="leftItemsTxt">0</span><span class="sm:hidden">🎒</span><span class="hidden sm:inline"> Items</span></span> • <span id="leftCashTxt" class="text-emerald-400">$100K</span> <span id="leftXrayBadge" class="hidden px-1 sm:px-1.5 py-0.5 rounded bg-cyan-500/25 border border-cyan-400 text-[9px] sm:text-[10px] text-cyan-200 font-mono">🔍 Max: $0</span></div>
+            <div id="leftBubbleTxt" class="hidden sm:block text-xs font-medium text-slate-300 italic mt-0.5">"Ready for the opening bid."</div>
           </div>
 
           <!-- Front Rival (#02) -->
-          <div class="absolute left-1/2 -translate-x-1/2 top-3 glass-dark border border-purple-400/30 rounded-2xl px-4 py-2 shadow-lg text-center pointer-events-none">
-            <div class="text-xs font-extrabold text-purple-300 flex items-center justify-center gap-1">▲ <span id="frontRivalAvatar" class="text-sm">🎩</span> <span id="frontNameTxt">Rival #02</span> (#02) <span id="frontRivalRankBadge" class="hidden px-1.5 py-0.5 rounded bg-amber-500/20 border border-amber-400/40 text-[10px] text-amber-300">🥉 140 RP</span> • <span id="frontItemsTxt">0</span> Items • <span id="frontCashTxt" class="text-emerald-400">$100K</span> <span id="frontXrayBadge" class="hidden px-1.5 py-0.5 rounded bg-cyan-500/25 border border-cyan-400 text-[10px] text-cyan-200 font-mono">🔍 Max: $0</span></div>
-            <div id="frontBubbleTxt" class="text-xs font-medium text-slate-300 italic mt-0.5">"Magnificent gallery tonight."</div>
+          <div class="absolute left-1/2 -translate-x-1/2 top-1.5 sm:top-3 max-w-[34%] sm:max-w-none glass-dark border border-purple-400/30 rounded-xl sm:rounded-2xl px-2 sm:px-4 py-1 sm:py-2 shadow-lg text-center pointer-events-none">
+            <div class="text-[10px] sm:text-xs font-extrabold text-purple-300 flex flex-wrap items-center justify-center gap-1 leading-tight"><span class="hidden sm:inline">▲</span> <span id="frontRivalAvatar" class="text-xs sm:text-sm">🎩</span> <span id="frontNameTxt" class="truncate max-w-[72px] sm:max-w-none">Rival #02</span> <span class="hidden sm:inline">(#02)</span> <span id="frontRivalRankBadge" class="hidden px-1.5 py-0.5 rounded bg-amber-500/20 border border-amber-400/40 text-[10px] text-amber-300">🥉 140 RP</span> <span class="hidden sm:inline">•</span> <span class="text-amber-300 sm:text-purple-300"><span id="frontItemsTxt">0</span><span class="sm:hidden">🎒</span><span class="hidden sm:inline"> Items</span></span> • <span id="frontCashTxt" class="text-emerald-400">$100K</span> <span id="frontXrayBadge" class="hidden px-1 sm:px-1.5 py-0.5 rounded bg-cyan-500/25 border border-cyan-400 text-[9px] sm:text-[10px] text-cyan-200 font-mono">🔍 Max: $0</span></div>
+            <div id="frontBubbleTxt" class="hidden sm:block text-xs font-medium text-slate-300 italic mt-0.5">"Magnificent gallery tonight."</div>
           </div>
 
           <!-- Right Rival (#04) -->
-          <div class="absolute right-4 top-3 glass-dark border border-rose-400/30 rounded-2xl px-3.5 py-2 shadow-lg text-right pointer-events-none">
-            <div class="text-xs font-extrabold text-rose-300 flex items-center justify-end gap-1"><span id="rightRivalAvatar" class="text-sm">🤠</span> <span id="rightNameTxt">Rival #04</span> (#04) <span id="rightRivalRankBadge" class="hidden px-1.5 py-0.5 rounded bg-amber-500/20 border border-amber-400/40 text-[10px] text-amber-300">🥉 110 RP</span> • <span id="rightItemsTxt">0</span> Items • <span id="rightCashTxt" class="text-emerald-400">$100K</span> <span id="rightXrayBadge" class="hidden px-1.5 py-0.5 rounded bg-cyan-500/25 border border-cyan-400 text-[10px] text-cyan-200 font-mono">🔍 Max: $0</span> ▶</div>
-            <div id="rightBubbleTxt" class="text-xs font-medium text-slate-300 italic mt-0.5">"Keeping cash for ties!"</div>
+          <div class="absolute right-1.5 sm:right-4 top-1.5 sm:top-3 max-w-[31%] sm:max-w-none glass-dark border border-rose-400/30 rounded-xl sm:rounded-2xl px-2 sm:px-3.5 py-1 sm:py-2 shadow-lg text-right pointer-events-none">
+            <div class="text-[10px] sm:text-xs font-extrabold text-rose-300 flex flex-wrap items-center justify-end gap-1 leading-tight"><span id="rightRivalAvatar" class="text-xs sm:text-sm">🤠</span> <span id="rightNameTxt" class="truncate max-w-[68px] sm:max-w-none">Rival #04</span> <span class="hidden sm:inline">(#04)</span> <span id="rightRivalRankBadge" class="hidden px-1.5 py-0.5 rounded bg-amber-500/20 border border-amber-400/40 text-[10px] text-amber-300">🥉 110 RP</span> <span class="hidden sm:inline">•</span> <span class="text-amber-300 sm:text-rose-300"><span id="rightItemsTxt">0</span><span class="sm:hidden">🎒</span><span class="hidden sm:inline"> Items</span></span> • <span id="rightCashTxt" class="text-emerald-400">$100K</span> <span id="rightXrayBadge" class="hidden px-1 sm:px-1.5 py-0.5 rounded bg-cyan-500/25 border border-cyan-400 text-[9px] sm:text-[10px] text-cyan-200 font-mono">🔍 Max: $0</span> <span class="hidden sm:inline">▶</span></div>
+            <div id="rightBubbleTxt" class="hidden sm:block text-xs font-medium text-slate-300 italic mt-0.5">"Keeping cash for ties!"</div>
           </div>
 
-          <!-- Live Match Bounty Quest Pill (Bottom-Left of Viewport) -->
-          <div id="matchBountyCard" class="absolute left-4 bottom-2.5 glass-dark border border-emerald-400/50 rounded-2xl px-3.5 py-2 shadow-xl pointer-events-none max-w-[270px]">
+          <!-- Live Match Bounty Quest Pill (Bottom-Left of Viewport on Desktop/Tablet) -->
+          <div id="matchBountyCard" class="hidden md:block absolute left-4 bottom-2.5 glass-dark border border-emerald-400/50 rounded-2xl px-3.5 py-2 shadow-xl pointer-events-none max-w-[270px]">
             <div class="flex items-center justify-between gap-2">
               <span class="text-[10px] font-black uppercase tracking-wider text-emerald-300 flex items-center gap-1">🎯 Match Bounty</span>
               <span id="bountyRewardBadge" class="px-2 py-0.5 rounded-full bg-emerald-500/25 border border-emerald-400/50 text-[10px] font-extrabold text-emerald-200">+$15K &amp; +30 RP</span>
@@ -338,27 +338,27 @@
           </div>
 
           <!-- Center Item Readout Pill + Special Lot Twist Banner -->
-          <div class="absolute left-1/2 -translate-x-1/2 bottom-2.5 flex flex-col items-center gap-1 pointer-events-none">
-            <div id="lotTwistBanner" class="hidden px-3.5 py-0.5 rounded-full bg-gradient-to-r from-fuchsia-600 via-rose-500 to-amber-500 text-white font-black text-[11px] uppercase tracking-wider shadow-lg border border-white/60 animate-bounce">
+          <div class="absolute left-1/2 -translate-x-1/2 bottom-1.5 sm:bottom-2.5 w-[94%] sm:w-auto flex flex-col items-center gap-1 pointer-events-none">
+            <div id="lotTwistBanner" class="hidden px-3 py-0.5 rounded-full bg-gradient-to-r from-fuchsia-600 via-rose-500 to-amber-500 text-white font-black text-[10px] sm:text-[11px] uppercase tracking-wider shadow-lg border border-white/60 animate-bounce text-center">
               ⚡ SPECIAL TWIST: 5s SPEED BLITZ LOT!
             </div>
-            <div class="glass-dark border border-amber-500/50 rounded-2xl px-5 py-2 text-center shadow-2xl min-w-[300px]">
-              <div class="flex items-center justify-center gap-2">
-                <span id="tableItemTitle" class="font-extrabold text-sm text-amber-200">The Sovereign 24k Golden Plunger</span>
-                <span id="tableCrownBadge" class="hidden bg-amber-400 text-slate-950 px-2.5 py-0.5 rounded-full text-xs font-extrabold">👑 MOST EXPENSIVE</span>
+            <div class="glass-dark border border-amber-500/50 rounded-2xl px-3 sm:px-5 py-1.5 sm:py-2 text-center shadow-2xl w-full sm:w-auto sm:min-w-[300px]">
+              <div class="flex items-center justify-center gap-1.5 sm:gap-2 flex-wrap">
+                <span id="tableItemTitle" class="font-extrabold text-xs sm:text-sm text-amber-200 truncate max-w-[220px] sm:max-w-none">The Sovereign 24k Golden Plunger</span>
+                <span id="tableCrownBadge" class="hidden bg-amber-400 text-slate-950 px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-extrabold">👑 MOST EXPENSIVE</span>
               </div>
-              <div class="flex items-center justify-center gap-2.5 text-xs font-semibold mt-0.5">
-                <span class="text-slate-400">Start: <strong id="tableStartPrice" class="text-slate-200">$5,000</strong></span>
+              <div class="flex items-center justify-center gap-2 sm:gap-2.5 text-[11px] sm:text-xs font-semibold mt-0.5">
+                <span class="hidden sm:inline text-slate-400">Start: <strong id="tableStartPrice" class="text-slate-200">$5,000</strong></span>
+                <span class="hidden sm:inline">•</span>
+                <span class="text-slate-300">Bid: <strong id="tableCurrentBid" class="text-emerald-400 text-xs sm:text-sm font-extrabold">$5,000</strong></span>
                 <span>•</span>
-                <span class="text-slate-300">Bid: <strong id="tableCurrentBid" class="text-emerald-400 text-sm font-extrabold">$5,000</strong></span>
-                <span>•</span>
-                <span id="tableLeaderName" class="text-amber-300 font-extrabold">No Bids</span>
+                <span id="tableLeaderName" class="text-amber-300 font-extrabold truncate max-w-[130px] sm:max-w-none">No Bids</span>
               </div>
             </div>
           </div>
 
           <!-- Clickable Hitbox Over Your Right Hand Holding Bidding Card (#01) -->
-          <button id="rightHandCardClickArea" title="Click your Bidding Card (#01) to raise it with your hand!" class="absolute right-3 bottom-2 w-36 h-44 bg-transparent hover:bg-amber-400/10 rounded-2xl flex flex-col items-center justify-end p-2 group">
+          <button id="rightHandCardClickArea" title="Click your Bidding Card (#01) to raise it with your hand!" class="hidden sm:flex absolute right-3 bottom-2 w-36 h-44 bg-transparent hover:bg-amber-400/10 rounded-2xl flex-col items-center justify-end p-2 group">
             <span id="playerPaddleAvatarBadge" class="absolute -top-3 right-6 bg-slate-950 border-2 border-amber-400 rounded-full w-8 h-8 flex items-center justify-center text-sm shadow-lg group-hover:scale-110 transition-transform">🧐</span>
             <span class="bg-amber-500 group-hover:bg-emerald-500 text-slate-950 font-extrabold text-xs px-3 py-1 rounded-full shadow transition-colors">
               ✋ Raise Card #01
@@ -366,21 +366,21 @@
           </button>
 
           <!-- COMPETITIVE CONTENDERS SHOWDOWN + 3-SECOND COUNTDOWN OVERLAY -->
-          <div id="preMatchShowdownOverlay" class="hidden absolute inset-0 z-40 bg-slate-950/80 backdrop-blur-md flex flex-col items-center justify-center p-4 sm:p-6 select-none">
+          <div id="preMatchShowdownOverlay" class="hidden absolute inset-0 z-40 bg-slate-950/80 backdrop-blur-md flex flex-col items-center justify-center p-3 sm:p-6 select-none overflow-y-auto">
             <!-- STAGE 1: COMPETITIVE CONTENDER INTRODUCTIONS -->
             <div id="contenderShowdownStage" class="w-full max-w-4xl flex flex-col items-center text-center">
-              <div id="showdownModeBadge" class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-gradient-to-r from-red-600/30 via-amber-500/30 to-red-600/30 border border-amber-400/60 text-amber-300 font-black text-xs uppercase tracking-widest mb-1.5 shadow-lg animate-pulse">
+              <div id="showdownModeBadge" class="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1 rounded-full bg-gradient-to-r from-red-600/30 via-amber-500/30 to-red-600/30 border border-amber-400/60 text-amber-300 font-black text-[10px] sm:text-xs uppercase tracking-widest mb-1 sm:mb-1.5 shadow-lg animate-pulse">
                 <span>⚔️</span> <span>HIGH-STAKES TABLE SHOWDOWN • MEET THE CONTENDERS</span> <span>⚔️</span>
               </div>
-              <h2 id="showdownTitleText" class="font-serif-display text-2xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-100 via-amber-300 to-rose-400 tracking-wide mb-1 drop-shadow-[0_4px_20px_rgba(245,158,11,0.5)]">
+              <h2 id="showdownTitleText" class="font-serif-display text-xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-100 via-amber-300 to-rose-400 tracking-wide mb-1 drop-shadow-[0_4px_20px_rgba(245,158,11,0.5)]">
                 4 RIVALS • 10 LOTS • NO MERCY
               </h2>
-              <p id="showdownSubText" class="text-xs text-slate-300 font-semibold mb-3.5">
+              <p id="showdownSubText" class="hidden sm:block text-xs text-slate-300 font-semibold mb-3.5">
                 Size up your competition before the Auctioneer slams the Royal Hammer!
               </p>
 
               <!-- 4 Competitive Contender Cards -->
-              <div id="contenderCardsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 w-full mb-4 text-left"></div>
+              <div id="contenderCardsGrid" class="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3 w-full mb-3 sm:mb-4 text-left"></div>
 
               <div class="flex items-center gap-4">
                 <button id="skipToCountdownBtn" class="btn-lux px-6 py-2.5 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 text-slate-950 font-black text-xs sm:text-sm rounded-2xl shadow-xl border-2 border-white/70 flex items-center gap-2">
@@ -404,79 +404,79 @@
           </div>
 
           <!-- HALFTIME SELL MODAL (ONLY AFTER LOT #5) -->
-          <div id="halftimeSellModal" class="hidden absolute inset-5 z-30 glass-dark border-2 border-amber-400 rounded-3xl p-6 flex flex-col justify-between shadow-2xl">
+          <div id="halftimeSellModal" class="hidden absolute inset-3 sm:inset-5 z-30 glass-dark border-2 border-amber-400 rounded-3xl p-4 sm:p-6 flex flex-col justify-between shadow-2xl overflow-y-auto">
             <div>
               <div class="flex items-center justify-between border-b border-slate-700 pb-3 mb-3">
                 <div>
                   <span class="bg-amber-500 text-slate-950 font-extrabold text-xs px-3 py-1 rounded-full">
                     🏷️ Halftime (After Lot 5): 1-Min Selling Pause
                   </span>
-                  <span class="text-xs font-semibold text-slate-300 ml-2">Sell any item for 70% cash!</span>
+                  <span class="hidden sm:inline text-xs font-semibold text-slate-300 ml-2">Sell any item for 70% cash!</span>
                 </div>
                 <span id="halftimeSellTimer" class="font-mono font-extrabold text-base text-amber-400">60s</span>
               </div>
-              <div id="halftimeSellGrid" class="grid grid-cols-3 gap-3 max-h-52 overflow-y-auto p-1"></div>
+              <div id="halftimeSellGrid" class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 max-h-52 overflow-y-auto p-1"></div>
             </div>
             <div class="flex items-center justify-between border-t border-slate-700 pt-3">
-              <span class="text-sm font-extrabold text-slate-200">Your Money: <strong id="halftimeSellCash" class="text-emerald-400">$100,000</strong></span>
-              <button id="toTradingPauseBtn" class="btn-lux px-5 py-2 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-extrabold text-xs rounded-xl">
-                Next: 1-Min Trading Pause ➔
+              <span class="text-xs sm:text-sm font-extrabold text-slate-200">Money: <strong id="halftimeSellCash" class="text-emerald-400">$100,000</strong></span>
+              <button id="toTradingPauseBtn" class="btn-lux px-4 sm:px-5 py-2 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-extrabold text-xs rounded-xl">
+                Next: Trading Pause ➔
               </button>
             </div>
           </div>
 
           <!-- HALFTIME TRADE MODAL (ONLY AFTER LOT #5) -->
-          <div id="halftimeTradeModal" class="hidden absolute inset-5 z-30 glass-dark border-2 border-sky-400 rounded-3xl p-6 flex flex-col justify-between shadow-2xl">
+          <div id="halftimeTradeModal" class="hidden absolute inset-3 sm:inset-5 z-30 glass-dark border-2 border-sky-400 rounded-3xl p-4 sm:p-6 flex flex-col justify-between shadow-2xl overflow-y-auto">
             <div>
               <div class="flex items-center justify-between border-b border-slate-700 pb-3 mb-3">
                 <div>
                   <span class="bg-sky-400 text-slate-950 font-extrabold text-xs px-3 py-1 rounded-full">
                     🤝 Halftime (After Lot 5): 1-Min Trading Pause
                   </span>
-                  <span class="text-xs font-semibold text-slate-300 ml-2">Trade items &amp; cash with your rival collectors!</span>
+                  <span class="hidden sm:inline text-xs font-semibold text-slate-300 ml-2">Trade items &amp; cash with your rival collectors!</span>
                 </div>
                 <span id="halftimeTradeTimer" class="font-mono font-extrabold text-base text-sky-400">60s</span>
               </div>
-              <div id="halftimeTradeGrid" class="grid grid-cols-3 gap-3 max-h-52 overflow-y-auto p-1"></div>
+              <div id="halftimeTradeGrid" class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 max-h-52 overflow-y-auto p-1"></div>
             </div>
             <div class="flex items-center justify-between border-t border-slate-700 pt-3">
               <span id="halftimeTradeStatus" class="text-xs font-bold text-sky-300">Pick a trade above or continue to Lot #6!</span>
-              <button id="finishHalftimeBtn" class="btn-lux px-5 py-2 bg-amber-500 text-slate-950 font-extrabold text-xs rounded-xl">
+              <button id="finishHalftimeBtn" class="btn-lux px-4 sm:px-5 py-2 bg-amber-500 text-slate-950 font-extrabold text-xs rounded-xl">
                 Continue to Lot #6 ➔
               </button>
             </div>
           </div>
 
           <!-- FINAL WINNER MODAL -->
-          <div id="finalWinnerModal" class="hidden absolute inset-4 z-30 glass-dark border-2 border-amber-400 rounded-3xl p-5 flex flex-col justify-between text-center shadow-2xl">
+          <div id="finalWinnerModal" class="hidden absolute inset-2.5 sm:inset-4 z-30 glass-dark border-2 border-amber-400 rounded-3xl p-3.5 sm:p-5 flex flex-col justify-between text-center shadow-2xl overflow-y-auto">
             <div>
               <div id="winBadgeText" class="inline-block bg-amber-500/20 text-amber-300 font-extrabold text-xs px-3.5 py-1 rounded-full mb-1.5">
                 🏆 WINNER
               </div>
-              <h2 id="winTitleText" class="font-serif-display text-2xl sm:text-3xl font-extrabold text-white">You Won the Auction!</h2>
-              <p id="winSubText" class="text-xs sm:text-sm font-medium text-slate-300 mb-3"></p>
-              <div id="winLeaderboardGrid" class="grid grid-cols-4 gap-2.5 text-left mb-2.5"></div>
-              <div id="winAwardsRow" class="grid grid-cols-3 gap-2 text-left mb-2.5"></div>
+              <h2 id="winTitleText" class="font-serif-display text-xl sm:text-3xl font-extrabold text-white">You Won the Auction!</h2>
+              <p id="winSubText" class="text-xs sm:text-sm font-medium text-slate-300 mb-2.5 sm:mb-3"></p>
+              <div id="winLeaderboardGrid" class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-2.5 text-left mb-2 sm:mb-2.5"></div>
+              <div id="winAwardsRow" class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-left mb-2 sm:mb-2.5"></div>
 
               <!-- Ranked Progression Box (Bronze -> Silver -> Gold -> Diamond -> Grandmaster) -->
-              <div id="postMatchRankBox" class="bg-slate-900/95 border border-amber-400/50 rounded-2xl p-3 text-left flex flex-wrap items-center justify-between gap-3">
-                <div class="flex items-center gap-3">
-                  <div id="postMatchRankIcon" class="w-11 h-11 rounded-2xl bg-amber-500/20 border border-amber-400/50 flex items-center justify-center text-2xl">
+              <div id="postMatchRankBox" class="bg-slate-900/95 border border-amber-400/50 rounded-2xl p-2.5 sm:p-3 text-left flex flex-wrap items-center justify-between gap-2 sm:gap-3">
+                <div class="flex items-center gap-2.5 sm:gap-3">
+                  <div id="postMatchRankIcon" class="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-amber-500/20 border border-amber-400/50 flex items-center justify-center text-xl sm:text-2xl">
                     🥉
                   </div>
                   <div>
-                    <div class="flex items-center gap-2 flex-wrap">
-                      <span id="postMatchAccountName" class="font-extrabold text-sm text-white">Collector</span>
-                      <span id="postMatchTierLabel" class="px-2 py-0.5 rounded-full text-[11px] font-extrabold bg-amber-500 text-slate-950">BRONZE II</span>
+                    <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+                      <span id="postMatchAccountName" class="font-extrabold text-xs sm:text-sm text-white">Collector</span>
+                      <span id="postMatchTierLabel" class="px-2 py-0.5 rounded-full text-[10px] sm:text-[11px] font-extrabold bg-amber-500 text-slate-950">BRONZE II</span>
                       <span id="postMatchRpDelta" class="text-xs font-extrabold text-emerald-400">+150 RP!</span>
                       <span id="postMatchModeTag" class="px-2 py-0.5 rounded-full text-[10px] font-black bg-rose-500/20 border border-rose-400/50 text-rose-300">🏆 RANKED 2X STAKES</span>
                     </div>
-                    <div id="postMatchRankSub" class="text-xs text-slate-400 font-semibold mt-0.5">
+                    <div id="postMatchRankSub" class="text-[11px] sm:text-xs text-slate-400 font-semibold mt-0.5">
                       Total: 250 RP • 50 RP to 🥈 SILVER!
                     </div>
                   </div>
                 </div>
-                <div class="w-56">
+                <div class="w-full sm:w-56">
                   <div class="flex justify-between text-[9px] font-extrabold text-slate-400 mb-1">
                     <span>🥉 Bronze</span>
                     <span>🥈 Silver</span>
@@ -490,17 +490,17 @@
                 </div>
               </div>
             </div>
-            <div class="flex flex-wrap justify-center gap-2.5 mt-2">
-              <button id="replayWinCutsceneBtn" class="btn-lux px-4 py-2 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-extrabold text-xs rounded-xl shadow">
-                🎬 Watch Victory Cutscene
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-2.5 mt-2">
+              <button id="replayWinCutsceneBtn" class="btn-lux px-3.5 sm:px-4 py-2 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-extrabold text-xs rounded-xl shadow">
+                🎬 Victory Cutscene
               </button>
-              <button id="openAccountFromWinBtn" class="btn-lux px-4 py-2 bg-slate-800 hover:bg-slate-700 border border-amber-400/50 text-amber-300 font-extrabold text-xs rounded-xl">
-                🥇 Account &amp; Ranked Leaderboard
+              <button id="openAccountFromWinBtn" class="btn-lux px-3.5 sm:px-4 py-2 bg-slate-800 hover:bg-slate-700 border border-amber-400/50 text-amber-300 font-extrabold text-xs rounded-xl">
+                🥇 Ranks
               </button>
-              <button id="playAgainMatchBtn" class="btn-lux px-5 py-2 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-extrabold text-xs rounded-xl">
+              <button id="playAgainMatchBtn" class="btn-lux px-4 sm:px-5 py-2 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-extrabold text-xs rounded-xl">
                 🔄 Play Again
               </button>
-              <button id="returnMainMenuBtn" class="btn-lux px-4 py-2 bg-slate-800 text-slate-200 font-extrabold text-xs rounded-xl">
+              <button id="returnMainMenuBtn" class="btn-lux px-3.5 sm:px-4 py-2 bg-slate-800 text-slate-200 font-extrabold text-xs rounded-xl">
                 🏠 Main Menu
               </button>
             </div>
@@ -508,49 +508,49 @@
         </div>
 
         <!-- BOTTOM BAR -->
-        <div class="relative z-20 glass-dark border-t border-amber-500/30 px-4 py-2.5 flex flex-wrap items-center justify-between gap-2.5">
-          <div class="flex items-center gap-1.5 flex-wrap">
+        <div class="relative z-20 glass-dark border-t border-amber-500/30 px-2.5 sm:px-4 py-2 sm:py-2.5 flex flex-wrap items-center justify-between gap-1.5 sm:gap-2.5">
+          <div class="flex items-center gap-1.5 w-full sm:w-auto justify-between sm:justify-start">
             <div class="flex gap-1" id="incBtnsContainer"></div>
-            <button id="mainBidBtn" class="btn-lux bg-gradient-to-r from-emerald-500 to-teal-600 disabled:opacity-40 text-white font-extrabold py-2 px-4 rounded-xl text-xs shadow-md flex items-center gap-1.5">
+            <button id="mainBidBtn" class="btn-lux flex-1 sm:flex-initial justify-center bg-gradient-to-r from-emerald-500 to-teal-600 disabled:opacity-40 text-white font-extrabold py-2.5 sm:py-2 px-3 sm:px-4 rounded-xl text-xs shadow-md flex items-center gap-1.5">
               <span id="mainBidBtnLabel">✋ Raise Card #01</span>
               <span id="mainBidBtnAmount" class="font-mono text-emerald-100">($5,000)</span>
             </button>
-            <button id="mainPassBtn" class="btn-lux bg-slate-800 hover:bg-slate-700 disabled:opacity-40 text-slate-300 font-bold py-2 px-3 rounded-xl text-xs border border-slate-600">
+            <button id="mainPassBtn" class="btn-lux bg-slate-800 hover:bg-slate-700 disabled:opacity-40 text-slate-300 font-bold py-2.5 sm:py-2 px-3 rounded-xl text-xs border border-slate-600 shrink-0">
               🏳️ Pass
             </button>
           </div>
 
           <!-- Tactical Mind-Game Power-Ups + Live Taunt Emotes -->
-          <div class="flex items-center gap-1.5 bg-slate-900/95 border border-amber-500/30 rounded-xl px-2.5 py-1 shadow-inner">
-            <button id="powerHypeBtn" title="Bluff Hype [Key 1]: Bait rivals into raising their max bid by +35% so they waste their money!" class="btn-lux px-2.5 py-1 bg-gradient-to-r from-orange-500 to-amber-500 disabled:opacity-35 text-slate-950 font-black text-[11px] rounded-lg flex items-center gap-1 shadow">
+          <div class="flex items-center justify-center gap-1.5 bg-slate-900/95 border border-amber-500/30 rounded-xl px-2 sm:px-2.5 py-1 shadow-inner w-full sm:w-auto">
+            <button id="powerHypeBtn" title="Bluff Hype [Key 1]: Bait rivals into raising their max bid by +35% so they waste their money!" class="btn-lux flex-1 sm:flex-initial justify-center px-2 sm:px-2.5 py-1 bg-gradient-to-r from-orange-500 to-amber-500 disabled:opacity-35 text-slate-950 font-black text-[11px] rounded-lg flex items-center gap-1 shadow">
               <span>📣 Bluff</span>
               <span id="powerHypeCount" class="bg-slate-950/80 text-amber-300 px-1.5 rounded text-[10px]">2</span>
             </button>
-            <button id="powerFreezeBtn" title="Ice Freeze [Key 2]: Freeze all rival paddles for 4 seconds so they can't outbid you!" class="btn-lux px-2.5 py-1 bg-gradient-to-r from-cyan-400 to-sky-500 disabled:opacity-35 text-slate-950 font-black text-[11px] rounded-lg flex items-center gap-1 shadow">
+            <button id="powerFreezeBtn" title="Ice Freeze [Key 2]: Freeze all rival paddles for 4 seconds so they can't outbid you!" class="btn-lux flex-1 sm:flex-initial justify-center px-2 sm:px-2.5 py-1 bg-gradient-to-r from-cyan-400 to-sky-500 disabled:opacity-35 text-slate-950 font-black text-[11px] rounded-lg flex items-center gap-1 shadow">
               <span>❄️ Freeze</span>
               <span id="powerFreezeCount" class="bg-slate-950/80 text-cyan-200 px-1.5 rounded text-[10px]">1</span>
             </button>
-            <button id="powerXrayBtn" title="X-Ray Appraisal [Key 3]: Reveal every rival's secret Max Bid ceiling for this lot!" class="btn-lux px-2.5 py-1 bg-gradient-to-r from-purple-500 to-indigo-600 disabled:opacity-35 text-white font-black text-[11px] rounded-lg flex items-center gap-1 shadow">
+            <button id="powerXrayBtn" title="X-Ray Appraisal [Key 3]: Reveal every rival's secret Max Bid ceiling for this lot!" class="btn-lux flex-1 sm:flex-initial justify-center px-2 sm:px-2.5 py-1 bg-gradient-to-r from-purple-500 to-indigo-600 disabled:opacity-35 text-white font-black text-[11px] rounded-lg flex items-center gap-1 shadow">
               <span>🔍 X-Ray</span>
               <span id="powerXrayCount" class="bg-slate-950/80 text-purple-200 px-1.5 rounded text-[10px]">2</span>
             </button>
-            <div class="h-4 w-px bg-slate-700 mx-0.5"></div>
-            <button data-emote="😂" title="Taunt: Laugh at Rivals" class="emote-btn hover:scale-125 transition-transform text-sm px-1">😂</button>
-            <button data-emote="💸" title="Taunt: Flex Your Cash" class="emote-btn hover:scale-125 transition-transform text-sm px-1">💸</button>
-            <button data-emote="👀" title="Taunt: Intense Stare-Down" class="emote-btn hover:scale-125 transition-transform text-sm px-1">👀</button>
-            <button data-emote="🔥" title="Taunt: Hype Up the Table" class="emote-btn hover:scale-125 transition-transform text-sm px-1">🔥</button>
+            <div class="hidden sm:block h-4 w-px bg-slate-700 mx-0.5"></div>
+            <button data-emote="😂" title="Taunt: Laugh at Rivals" class="hidden sm:inline-block emote-btn hover:scale-125 transition-transform text-sm px-1">😂</button>
+            <button data-emote="💸" title="Taunt: Flex Your Cash" class="hidden sm:inline-block emote-btn hover:scale-125 transition-transform text-sm px-1">💸</button>
+            <button data-emote="👀" title="Taunt: Intense Stare-Down" class="hidden sm:inline-block emote-btn hover:scale-125 transition-transform text-sm px-1">👀</button>
+            <button data-emote="🔥" title="Taunt: Hype Up the Table" class="hidden sm:inline-block emote-btn hover:scale-125 transition-transform text-sm px-1">🔥</button>
           </div>
 
           <!-- Party Mode 4-Friend Quick Bid Buttons -->
-          <div id="partyFriendsBar" class="hidden items-center gap-1.5 bg-slate-900/95 border border-sky-400/40 rounded-xl px-2.5 py-1">
-            <span class="text-xs font-extrabold text-sky-300 mr-1">👥 Party Bids:</span>
-            <button data-party-seat="player" class="party-bid-btn btn-lux px-2.5 py-1 bg-amber-500 text-slate-950 font-extrabold text-xs rounded-lg">✋ #01 (Space)</button>
-            <button data-party-seat="front" class="party-bid-btn btn-lux px-2.5 py-1 bg-purple-500 text-white font-extrabold text-xs rounded-lg">✋ #02 (W)</button>
-            <button data-party-seat="left" class="party-bid-btn btn-lux px-2.5 py-1 bg-sky-500 text-slate-950 font-extrabold text-xs rounded-lg">✋ #03 (A)</button>
-            <button data-party-seat="right" class="party-bid-btn btn-lux px-2.5 py-1 bg-rose-500 text-white font-extrabold text-xs rounded-lg">✋ #04 (L)</button>
+          <div id="partyFriendsBar" class="hidden items-center gap-1.5 bg-slate-900/95 border border-sky-400/40 rounded-xl px-2.5 py-1 w-full sm:w-auto justify-center">
+            <span class="hidden sm:inline text-xs font-extrabold text-sky-300 mr-1">👥 Party Bids:</span>
+            <button data-party-seat="player" class="party-bid-btn btn-lux px-2.5 py-1 bg-amber-500 text-slate-950 font-extrabold text-xs rounded-lg">✋ #01</button>
+            <button data-party-seat="front" class="party-bid-btn btn-lux px-2.5 py-1 bg-purple-500 text-white font-extrabold text-xs rounded-lg">✋ #02</button>
+            <button data-party-seat="left" class="party-bid-btn btn-lux px-2.5 py-1 bg-sky-500 text-slate-950 font-extrabold text-xs rounded-lg">✋ #03</button>
+            <button data-party-seat="right" class="party-bid-btn btn-lux px-2.5 py-1 bg-rose-500 text-white font-extrabold text-xs rounded-lg">✋ #04</button>
           </div>
 
-          <div class="flex items-center gap-2 bg-slate-900/90 border border-slate-700 rounded-xl px-3 py-1.5 flex-1 max-w-xs overflow-hidden">
+          <div class="hidden lg:flex items-center gap-2 bg-slate-900/90 border border-slate-700 rounded-xl px-3 py-1.5 flex-1 max-w-xs overflow-hidden">
             <span class="text-xs font-extrabold text-amber-300 shrink-0">Bag (<span id="bottomBagCount">0</span>):</span>
             <div id="bottomBagList" class="flex items-center gap-1.5 overflow-x-auto py-0.5 text-xs">
               <span class="text-xs text-slate-500 font-medium">No items yet</span>
@@ -560,17 +560,17 @@
       </div>
 
       <!-- FRIENDS MULTIPLAYER MODAL (ONLINE ROOM CODE & SAME-SCREEN PARTY MODE) -->
-      <div id="friendsModal" class="hidden absolute inset-5 z-50 glass-dark border-2 border-sky-400/60 rounded-3xl p-6 flex flex-col justify-between shadow-2xl max-w-xl mx-auto my-auto h-fit">
+      <div id="friendsModal" class="hidden absolute inset-3 sm:inset-5 z-50 glass-dark border-2 border-sky-400/60 rounded-3xl p-4 sm:p-6 flex flex-col justify-between shadow-2xl max-w-xl mx-auto my-auto h-fit max-h-[92vh] overflow-y-auto">
         <div>
           <div class="flex justify-between items-center border-b border-slate-700 pb-3 mb-4">
             <div>
-              <h3 class="font-serif-display text-xl font-extrabold text-sky-300">👥 Play With Your Friends</h3>
+              <h3 class="font-serif-display text-lg sm:text-xl font-extrabold text-sky-300">👥 Play With Your Friends</h3>
               <p class="text-xs text-slate-300">Play together across different devices with a Room Code, or on the same screen!</p>
             </div>
             <button id="closeFriendsModalBtn" class="bg-slate-800 hover:bg-slate-700 w-8 h-8 rounded-full font-bold text-xs">✕</button>
           </div>
 
-          <div class="grid grid-cols-2 gap-4 text-xs">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 text-xs">
             <!-- Left Column: Online Room Code (Different Devices) -->
             <div class="bg-slate-900/90 border border-sky-500/40 rounded-2xl p-4 flex flex-col justify-between gap-3">
               <div>
@@ -4295,29 +4295,29 @@
             .map((p) => {
               const prof = rivalProfiles[p.id] || rivalProfiles.player;
               return `
-                <div class="rounded-2xl border-2 ${prof.border} p-3.5 shadow-xl flex flex-col justify-between">
+                <div class="rounded-2xl border-2 ${prof.border} p-2.5 sm:p-3.5 shadow-xl flex flex-col justify-between">
                   <div>
-                    <div class="flex items-center justify-between gap-1 mb-2">
+                    <div class="flex items-center justify-between gap-1 mb-1.5 sm:mb-2">
                       <span class="px-2 py-0.5 rounded-full text-[10px] font-black ${prof.badgeBg}">SEAT ${p.paddle}</span>
-                      <span class="text-[11px] font-bold text-amber-300">${prof.stars}</span>
+                      <span class="text-[10px] sm:text-[11px] font-bold text-amber-300 truncate">${prof.stars}</span>
                     </div>
-                    <div class="flex items-center gap-2.5 mb-2">
-                      <div class="w-11 h-11 rounded-2xl bg-slate-950 border border-white/20 flex items-center justify-center text-2xl shadow-inner shrink-0">
+                    <div class="flex items-center gap-2 sm:gap-2.5 mb-1 sm:mb-2">
+                      <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-2xl bg-slate-950 border border-white/20 flex items-center justify-center text-xl sm:text-2xl shadow-inner shrink-0">
                         ${p.avatar || "🧐"}
                       </div>
                       <div class="min-w-0">
-                        <div class="font-extrabold text-sm text-white truncate">${p.name}</div>
-                        <div class="text-[10px] font-black text-amber-300 uppercase tracking-wider truncate">${prof.title}</div>
+                        <div class="font-extrabold text-xs sm:text-sm text-white truncate">${p.name}</div>
+                        <div class="text-[9px] sm:text-[10px] font-black text-amber-300 uppercase tracking-wider truncate">${prof.title}</div>
                       </div>
                     </div>
-                    <div class="text-[11px] font-bold text-slate-300 mb-1.5">${prof.style}</div>
-                    <p class="text-[11px] italic text-slate-200 bg-slate-950/70 border border-slate-800 rounded-xl p-2 leading-snug">
+                    <div class="hidden sm:block text-[11px] font-bold text-slate-300 mb-1.5">${prof.style}</div>
+                    <p class="hidden sm:block text-[11px] italic text-slate-200 bg-slate-950/70 border border-slate-800 rounded-xl p-2 leading-snug">
                       "${prof.quote}"
                     </p>
                   </div>
-                  <div class="mt-2.5 pt-2 border-t border-slate-800 flex items-center justify-between text-xs font-extrabold">
-                    <span class="text-slate-400">Bankroll:</span>
-                    <span class="font-mono text-emerald-400">${fmt(p.cash)}</span>
+                  <div class="mt-1.5 sm:mt-2.5 pt-1.5 sm:pt-2 border-t border-slate-800 flex items-center justify-between text-[11px] sm:text-xs font-extrabold">
+                    <span class="text-slate-400">Cash:</span>
+                    <span class="font-mono text-emerald-400">${shortFmt(p.cash)}</span>
                   </div>
                 </div>
               `;
@@ -5181,8 +5181,8 @@
           }
           if (bCard) {
             bCard.className = this.activeBounty.done
-              ? "w-60 rounded-2xl p-2.5 shadow-xl border-2 border-emerald-400 bg-emerald-950/90 transition-all"
-              : "hud-card w-60 rounded-2xl p-2.5 shadow-xl border-purple-400/50 bg-slate-950/90 transition-all";
+              ? "hidden md:block absolute left-4 bottom-2.5 w-60 rounded-2xl p-2.5 shadow-xl border-2 border-emerald-400 bg-emerald-950/90 transition-all pointer-events-none"
+              : "hidden md:block absolute left-4 bottom-2.5 hud-card w-60 rounded-2xl p-2.5 shadow-xl border-purple-400/50 bg-slate-950/90 transition-all pointer-events-none";
           }
         }
 
@@ -5304,7 +5304,8 @@
         }
 
         const nextAmt = this.playerNextBid();
-        document.getElementById("mainBidBtnLabel").textContent = `✋ Raise Card ${you.paddle}`;
+        const isMobileScreen = window.innerWidth < 640;
+        document.getElementById("mainBidBtnLabel").textContent = isMobileScreen ? "✋ Bid" : `✋ Raise Card ${you.paddle}`;
         document.getElementById("mainBidBtnAmount").textContent = `(${shortFmt(nextAmt)})`;
         const rhSpan = document.querySelector("#rightHandCardClickArea span");
         if (rhSpan) rhSpan.textContent = `✋ Raise Card ${you.paddle}`;
@@ -7847,22 +7848,26 @@
         c.lineWidth = 1.5;
         c.stroke();
 
-        const pedGrad = c.createLinearGradient(W * 0.5 - 70, H * 0.65, W * 0.5 + 70, H * 0.71);
+        const pedY = isWide ? H * 0.68 : H * 0.62;
+        const pedVelvetY = isWide ? H * 0.665 : H * 0.605;
+        const clocheY = isWide ? H * 0.60 : H * 0.54;
+
+        const pedGrad = c.createLinearGradient(W * 0.5 - 70, pedY - 18, W * 0.5 + 70, pedY + 18);
         pedGrad.addColorStop(0, "#b45309");
         pedGrad.addColorStop(0.5, "#facc15");
         pedGrad.addColorStop(1, "#78350f");
         c.fillStyle = pedGrad;
         c.beginPath();
-        c.ellipse(W * 0.5, H * 0.68, 70, 17, 0, 0, Math.PI * 2);
+        c.ellipse(W * 0.5, pedY, 70, 17, 0, 0, Math.PI * 2);
         c.fill();
 
         c.fillStyle = "#7f1d1d";
         c.beginPath();
-        c.ellipse(W * 0.5, H * 0.665, 60, 13, 0, 0, Math.PI * 2);
+        c.ellipse(W * 0.5, pedVelvetY, 60, 13, 0, 0, Math.PI * 2);
         c.fill();
         c.restore();
 
-        this.drawCenterGlassClocheItem(c, W * 0.5, H * 0.60, t);
+        this.drawCenterGlassClocheItem(c, W * 0.5, clocheY, t);
         this.drawRealisticPlayerHandAndCard(c, W, H, t);
         this.drawFloatingFX(c, W, H);
         c.restore();
@@ -9101,11 +9106,11 @@
         const pApp = this.getPlayerAppearance();
 
         const isWide = W >= 768;
-        const playerScale = isWide ? Math.max(1.65, Math.min(2.35, W / 750)) : Math.max(1.15, Math.min(1.4, W / 380));
+        const playerScale = isWide ? Math.max(1.65, Math.min(2.35, W / 750)) : Math.max(0.85, Math.min(1.08, W / 420));
 
         // 1. VIP TABLE PROPS (First-Person Perspective on Table Felt)
-        const chipX = isWide ? W * 0.35 : W * 0.20;
-        const chipY = H - (isWide ? 38 : 24);
+        const chipX = isWide ? W * 0.35 : W * 0.16;
+        const chipY = H - (isWide ? 38 : 20);
         c.save();
         c.fillStyle = "rgba(0, 0, 0, 0.45)";
         c.beginPath();
@@ -9192,8 +9197,8 @@
         const swayX = Math.cos(t * 0.0025) * 1.6;
         const swayY = Math.sin(t * 0.0035) * 2;
 
-        const cx = W - 92 * playerScale + swayX;
-        const cy = H - 84 * playerScale - liftY + swayY;
+        const cx = W - (isWide ? 92 : 52) * playerScale + swayX;
+        const cy = H - (isWide ? 84 : 68) * playerScale - liftY + swayY;
 
         c.save();
         c.translate(cx, cy);
